@@ -210,6 +210,7 @@ export class Home {
 
     this.getStreak(winner, loser);
     this.updateStreaks();
+    this.onChangeTable(this.config);
 
     this.playerService.update(winner).subscribe();
     this.playerService.update(loser).subscribe();

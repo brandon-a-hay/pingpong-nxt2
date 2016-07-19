@@ -32,3 +32,6 @@ dist
 
 #configuration stuff
 config
+
+# stuff that heroku adds
+.DS_Store
