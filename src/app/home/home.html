@@ -1,0 +1,45 @@
+<div class="card-container">
+  <md-card x-large class="sample-content">
+    <h1>Leaderboard</h1>
+    <md-card-content>
+      <ng-table [config]="config.sorting"
+           (tableChanged)="onChangeTable(config)"
+           [rows]="rows" [columns]="columns">
+      </ng-table>
+    </md-card-content>
+  </md-card>
+  <md-card>
+    <md-card-title>New Game</md-card-title>
+    <md-card-content>
+      <form (ngSubmit)="addGame()">
+        <div class="form-group">
+          <label>Player 1</label>
+          <select [(ngModel)]="player1.name">
+            <option *ngFor="let player of data">{{player.name}}</option>
+          </select>
+
+          <label>Player 2</label>
+          <select [(ngModel)]="player2.name">
+            <option *ngFor="let player of data">{{player.name}}</option>
+          </select><br>
+
+          <label>{{player1.name}} Points</label>
+          <input type="number" [(ngModel)]="player1.score" />
+
+          <label>{{player2.name}} Points</label>
+          <input type="number" [(ngModel)]="player2.score" /><br>
+
+          <button md-raised-button color="primary">Submit</button>
+        </div>
+      </form>
+    </md-card-content>
+  </md-card>
+
+  <md-card>
+    <md-card-title>New player</md-card-title>
+    <md-card-content>
+      <new-player></new-player>
+    </md-card-content>
+  </md-card>
+
+</div>

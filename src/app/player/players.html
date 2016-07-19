@@ -1,0 +1,22 @@
+<!-- new player -->
+  <div id="player-form" class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <form>
+        <div class="form-group">
+          <label>Player Name</label>
+        <!-- BIND THIS VALUE TO todoData.text IN ANGULAR -->
+          <input 
+            type="text" 
+            class="form-control input-lg text-center" 
+            placeholder="Johnny Player" 
+            [(ngModel)]="name"
+            required>
+        </div>
+
+          <!-- createToDo() WILL CREATE NEW TODOS -->
+        <button type="submit" class="btn btn-primary btn-lg"
+          (click)="createPlayer()">Add Player</button>
+      </form>
+    </div>
+  </div>
+  <!-- end new player -->
