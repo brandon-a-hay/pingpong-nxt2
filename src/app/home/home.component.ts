@@ -233,6 +233,11 @@ export class Home {
     } else {
       loser.streak.count++;
     }
+
+    // check if we need to update the winner's highest streak
+    if (winner.streak.count > winner.highestWinStreak) {
+      winner.highestWinStreak = winner.streak.count;
+    }
   }
 
   // end post game processing

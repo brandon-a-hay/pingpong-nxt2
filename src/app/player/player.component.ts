@@ -25,6 +25,7 @@ export class Player {
   winPctg: number;
   currentGameScore: number;
   streakDisplay: string;
+  highestWinStreak: number;
 
   constructor(public playerService: PlayerService) { }
 

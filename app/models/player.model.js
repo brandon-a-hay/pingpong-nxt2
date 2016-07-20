@@ -9,7 +9,8 @@ let playerSchema = new mongoose.Schema({
   streak: {
     outcome: String,
     count: Number
-  }
+  },
+  highestWinStreak: { type: Number }
 });
 
 export default mongoose.model('Player', playerSchema);
